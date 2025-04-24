@@ -194,106 +194,65 @@
 </div>
 
 <div class="certificate">
-            <p>"Blue Team Level 1!"</p>
-            <!-- Blue Team Level 1 Certificates -->
- <!-- Domain 1: Phishing Analysis -->
-    <div class="certificate">
-        <h4>📧 Phishing Analysis</h4>
+    <h3>Blue Team Level 1 Certification</h3>
+    <p>Hands-on labs covering core defensive cybersecurity domains.</p>
+
+    <!-- Toggle Button: Phishing Analysis -->
+    <button class="show-section-btn" onclick="toggleDomain('phishing-analysis')">📧 Phishing Analysis</button>
+    <div id="phishing-analysis" style="display: none;">
         <div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233215.png')">
             <p>Categorizing Phishing Emails</p>
         </div>
         <div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233304.png')">
             <p>Manual Artifact Extraction</p>
         </div>
-	<div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233304.png')">
-            <p>Attachment Analysis</p>
-        </div>
-	<div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233304.png')">
-            <p>Phishing Response Capstone</p>
-        </div>
+        <div class="certificate"><p>Attachment Analysis</p></div>
+        <div class="certificate"><p>Phishing Response Capstone</p></div>
     </div>
 
-    <!-- Domain 2: Threat Intelligence -->
-    <div class="certificate">
-        <h4>🔍 Threat Intelligence</h4>
+    <!-- Toggle Button: Threat Intelligence -->
+    <button class="show-section-btn" onclick="toggleDomain('threat-intelligence')">🔍 Threat Intelligence</button>
+    <div id="threat-intelligence" style="display: none;">
         <div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233452.png')">
             <p>Threat Intel Platform: MISP</p>
         </div>
     </div>
 
-    <!-- Domain 3: Digital Forensics -->
-    <div class="certificate">
-        <h4>🧪 Digital Forensics</h4>
-        <div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233528.png')">
-            <p>Identifying File Systems</p>
-        </div>
-        <div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233700.png')">
-            <p>Metadata and File Carving</p>
-        </div>
-	<div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233700.png')">
-            <p>Hashing and Integrity</p>
-        </div>
-	<div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233700.png')">
-            <p>Data Acquisition</p>
-        </div>
-	<div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233700.png')">
-            <p>Windows Investigation 1</p>
-        </div>
-	<div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233700.png')">
-            <p>Windows Investigation 2</p>
-        </div>
-	<div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233700.png')">
-            <p>Windows Investigation Recycle Bin</p>
-        </div>
-	<div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233700.png')">
-            <p>Volatility For Memory Analysis</p>
-        </div>
-	<div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233700.png')">
-            <p>Volatility 3 Workbench Analysis</p>
-        </div>
-	<div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233700.png')">
-            <p>Autopsy For Disk Analysis</p>
-        </div>
+    <!-- Toggle Button: Digital Forensics -->
+    <button class="show-section-btn" onclick="toggleDomain('digital-forensics')">🧪 Digital Forensics</button>
+    <div id="digital-forensics" style="display: none;">
+        <div class="certificate"><p>Identifying File Systems</p></div>
+        <div class="certificate"><p>Metadata and File Carving</p></div>
+        <div class="certificate"><p>Hashing and Integrity</p></div>
+        <div class="certificate"><p>Data Acquisition</p></div>
+        <div class="certificate"><p>Windows Investigation 1</p></div>
+        <div class="certificate"><p>Windows Investigation 2</p></div>
+        <div class="certificate"><p>Windows Investigation Recycle Bin</p></div>
+        <div class="certificate"><p>Volatility For Memory Analysis</p></div>
+        <div class="certificate"><p>Volatility 3 Workbench Analysis</p></div>
+        <div class="certificate"><p>Autopsy For Disk Analysis</p></div>
     </div>
 
-    <!-- Domain 4: SIEM -->
-    <div class="certificate">
-        <h4>📊 Security Information & Event Monitoring (SIEM)</h4>
-        <!-- If you have relevant certs for SIEM, insert here -->
-        <div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233700.png')">
-            <p>Windows Event Log Analysis</p>
-        </div>
-	 <div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233700.png')">
-            <p>Splunk Investigation 1</p>
-        </div>
-	<div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233700.png')">
-            <p>Splunk Investigation 2</p>
-        </div>
-	<div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233700.png')">
-            <p>Splunk Investigation 3</p>
-        </div>
-	<div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233700.png')">
-            <p>Splunk Investigation 4</p>
-        </div>
+    <!-- Toggle Button: SIEM -->
+    <button class="show-section-btn" onclick="toggleDomain('siem-section')">📊 SIEM (Security Information & Event Monitoring)</button>
+    <div id="siem-section" style="display: none;">
+        <div class="certificate"><p>Windows Event Log Analysis</p></div>
+        <div class="certificate"><p>Splunk Investigation 1</p></div>
+        <div class="certificate"><p>Splunk Investigation 2</p></div>
+        <div class="certificate"><p>Splunk Investigation 3</p></div>
+        <div class="certificate"><p>Splunk Investigation 4</p></div>
     </div>
 
-    <!-- Domain 5: Incident Response -->
-    <div class="certificate">
-        <h4>🚨 Incident Response</h4>
-        <div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233726.png')">
-            <p>Windows Network Investigation 1</p>
-        </div>
-	<div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233726.png')">
-            <p>CMD and PowerShell For Response</p>
-        </div>
-	<div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233726.png')">
-            <p>DeepBlueCLI For Event Log Analysis</p>
-        </div>
-	<div class="certificate" onclick="openPDFModal('/mnt/data/Screenshot 2025-04-05 233726.png')">
-            <p>TheHive: Case Management</p>
-        </div>
+    <!-- Toggle Button: Incident Response -->
+    <button class="show-section-btn" onclick="toggleDomain('incident-response')">🚨 Incident Response</button>
+    <div id="incident-response" style="display: none;">
+        <div class="certificate"><p>Windows Network Investigation 1</p></div>
+        <div class="certificate"><p>CMD and PowerShell For Response</p></div>
+        <div class="certificate"><p>DeepBlueCLI For Event Log Analysis</p></div>
+        <div class="certificate"><p>TheHive: Case Management</p></div>
     </div>
 </div>
+
 	    
 <div class="certificate">
             <p>"CompTIA Security+"</p>
