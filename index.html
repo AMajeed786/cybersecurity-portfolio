@@ -457,6 +457,11 @@
     </footer>
 
     <script>
+	function toggleDomain(domainId) {
+    let domain = document.getElementById(domainId);
+    domain.style.display = (domain.style.display === "none" || domain.style.display === "") ? "block" : "none";
+}
+
         function toggleProjects(sectionId) {
             let projectsDiv = document.getElementById(sectionId);
             projectsDiv.style.display = (projectsDiv.style.display === "none" || projectsDiv.style.display === "") ? "block" : "none";
