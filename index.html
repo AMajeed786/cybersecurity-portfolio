@@ -412,6 +412,22 @@
   </div>
 </div>
 <!-- new -->
+<!-- 2 -->	  
+<button class="show-section-btn" onclick="openRedTeamSliderModal()">Cyber Range BTLO</button>
+<div id="redTeamSliderModal" class="modal">
+  <div class="modal-content" style="position:relative;max-width:1000px;">
+    <span class="close" onclick="closeRedTeamSliderModal()">&times;</span>
+    <h3>Red Team Dashboard</h3>
+    <p>Browse dashboard screenshots for the Red Team Project.</p>
+    <img id="redTeamSliderImage" src="" style="max-width:100%;max-height:900px;border-radius:8px;margin: 20px 0;" alt="Slider Image"/>
+    <div style="display:flex;justify-content:center;align-items:center;gap:20px;">
+      <button onclick="changeRedTeamSlide(-1)" style="font-size:20px;padding:8px 15px;">&#8592; Prev</button>
+      <button onclick="changeRedTeamSlide(1)" style="font-size:20px;padding:8px 15px;">Next &#8594;</button>
+    </div>
+    <div id="redTeamSliderCount" style="margin-top:12px;font-size:16px;color:#00d4ff;"></div>
+  </div>
+</div>
+<!-- 2 -->
 <!-- Advanced Cybersecurity Research Button -->
     <button class="show-section-btn" onclick="toggleProjects('advanced-cybersecurity-research')">Advanced Cybersecurity Project</button>
 
@@ -609,11 +625,52 @@ function changeSlide(direction) {
 }
 
 	    //test
+//2
+// Red Team images (add your image links here)
+const redTeamSliderImages = [
+  "https://i.postimg.cc/vmMS2wqB/DeepBlue.png",
+  "https://i.postimg.cc/jjX3G3mh/MM.png",
+  "https://i.postimg.cc/269c5bzb/Network-Analysis.png",
+  "https://i.postimg.cc/502K1qMW/P1.png",
+	"https://i.postimg.cc/PJL6vXx6/P2.png",
+	"https://i.postimg.cc/0jLVpTK9/Piggy.png",
+	"https://i.postimg.cc/2jJ9RZcg/Ps.png",
+	"https://i.postimg.cc/BQ0Yn03C/Anakus.png",
+	"https://i.postimg.cc/65fH7m5x/Countdown.png",
+	"https://i.postimg.cc/cL1FfBrg/Ransomware.png",
+	"https://i.postimg.cc/FHPDpkLP/Webshell.png"
+];
+let currentRedTeamSlide = 0;
 
+function openRedTeamSliderModal() {
+  currentRedTeamSlide = 0;
+  showRedTeamSlide();
+  document.getElementById('redTeamSliderModal').style.display = 'flex';
+}
+
+function closeRedTeamSliderModal() {
+  document.getElementById('redTeamSliderModal').style.display = 'none';
+}
+
+function showRedTeamSlide() {
+  let img = document.getElementById('redTeamSliderImage');
+  let count = document.getElementById('redTeamSliderCount');
+  img.src = redTeamSliderImages[currentRedTeamSlide];
+  count.textContent = `Image ${currentRedTeamSlide + 1} of ${redTeamSliderImages.length}`;
+}
+
+function changeRedTeamSlide(direction) {
+  currentRedTeamSlide += direction;
+  if (currentRedTeamSlide < 0) currentRedTeamSlide = redTeamSliderImages.length - 1;
+  if (currentRedTeamSlide >= redTeamSliderImages.length) currentRedTeamSlide = 0;
+  showRedTeamSlide();
+}
+//2
      </script>
 
 </body>
 </html>
+
 
 
 
