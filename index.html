@@ -666,10 +666,32 @@ function changeRedTeamSlide(direction) {
   showRedTeamSlide();
 }
 //2
+function openFromHash() {
+  const hash = window.location.hash.replace('#','');
+  if (!hash) return;
+  const [key, value] = hash.split('=');
+
+  if (key === 'show') {
+    // open a modal
+    if (value === 'cyberdefenders') openImageSliderModal();
+    if (value === 'btlo') openRedTeamSliderModal();
+  }
+  if (key === 'open') {
+    // expand a collapsible section
+    const el = document.getElementById(value);
+    if (el && (el.style.display === '' || el.style.display === 'none')) {
+      toggleProjects(value);
+    }
+    el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+window.addEventListener('DOMContentLoaded', openFromHash);
+//33
      </script>
 
 </body>
 </html>
+
 
 
 
