@@ -666,36 +666,13 @@ function changeRedTeamSlide(direction) {
   showRedTeamSlide();
 }
 //2
-function openFromHash() {
-  const hash = window.location.hash.replace('#','');
-  if (!hash) return;
-  const [key, value] = hash.split('=');
 
- document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-
-  if (key === 'show') {
-    // open a modal
-    if (value === 'cyberdefenders') openImageSliderModal();
-    if (value === 'tryhackme') openRedTeamSliderModal();
-	if (value === 'blueteam-labs') openRedTeamSliderModal();
-	if (value === 'Cyber Range BTLO') openRedTeamSliderModal();
-	if (value === 'google-cybersecurity-projects') openRedTeamSliderModal();
-  }
-  if (key === 'open') {
-    // expand a collapsible section
-    const el = document.getElementById(value);
-    if (el && (el.style.display === '' || el.style.display === 'none')) {
-      toggleProjects(value);
-    }
-    el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-}
-window.addEventListener('DOMContentLoaded', openFromHash);
 //33
      </script>
 
 </body>
 </html>
+
 
 
 
