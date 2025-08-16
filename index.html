@@ -671,10 +671,15 @@ function openFromHash() {
   if (!hash) return;
   const [key, value] = hash.split('=');
 
+ document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+
   if (key === 'show') {
     // open a modal
     if (value === 'cyberdefenders') openImageSliderModal();
-    if (value === 'btlo') openRedTeamSliderModal();
+    if (value === 'tryhackme') openRedTeamSliderModal();
+	if (value === 'blueteam-labs') openRedTeamSliderModal();
+	if (value === 'btlo') openRedTeamSliderModal();
+	if (value === 'google-cybersecurity-projects') openRedTeamSliderModal();
   }
   if (key === 'open') {
     // expand a collapsible section
@@ -691,6 +696,7 @@ window.addEventListener('DOMContentLoaded', openFromHash);
 
 </body>
 </html>
+
 
 
 
